@@ -1,0 +1,148 @@
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+body{
+
+    background:#111;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:100vh;
+
+    font-family:Arial, sans-serif;
+
+}
+
+.app{
+
+    width:min(95vw,1536px);
+    
+    aspect-ratio:1536 / 1024;
+
+}
+
+#background{
+
+    display:block;
+
+    width:100%;
+
+    height:auto;
+
+}
+
+#controls{
+
+    position:absolute;
+
+    inset:0;
+
+}
+
+#btn5000 {
+    position: absolute;
+    left: 413px;
+    top: 154px;
+    width: 116px;
+    height: 46px;
+    cursor: pointer;
+    border: none;
+}
+
+#btn10000 {
+    position: absolute;
+    left: 413px;
+    top: 214px;
+    width: 116px;
+    height: 46px;
+    cursor: pointer;
+    border: none;
+}
+
+#btn20000 {
+    position: absolute;
+    left: 413px;
+    top: 273px;
+    width: 116px;
+    height: 46px;
+    cursor: pointer;
+    border: none;
+}
+
+#btnBuy {
+    position: absolute;
+    left: 413px;
+    top: 331px;
+    width: 116px;
+    height: 46px;
+    cursor: pointer;
+    border: none;
+}
+
+#btnStop {
+    position: absolute;
+    left: 413px;
+    top: 390px;
+    width: 116px;
+    height: 46px;
+    cursor: pointer;
+    border: none;
+}
+
+#btnReset {
+    position: absolute;
+    left: 413px;
+    top: 449px;
+    width: 116px;
+    height: 46px;
+    cursor: pointer;
+    border: none;
+}
+
+#output{
+
+    position: absolute;
+    background: transparent;
+    left: 18px;
+    bottom: 25px;
+    width: 515px;
+    height: 80px;
+}
+
+#graph{
+
+    position:absolute;
+
+    right:40px;
+
+    top:70px;
+
+    width:700px;
+
+    height:650px;
+
+}
+
+.control-btn {
+    position: absolute;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    
+    background:rgba(0,255,150,.15);
+    border:2px solid #00ff99;
+    border-radius:5px;
+    box-shadow:0 0 12px #00ff99;
+
+}
