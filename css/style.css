@@ -248,6 +248,51 @@ body{
 
 }
 
+.edge{
+
+    opacity:0;
+
+    transition:.35s;
+
+}
+
+.edge.active{
+
+    opacity:1;
+
+}
+
+.edge.visited{
+
+    opacity:1;
+
+}
+
+.edge.active{
+
+    opacity:1;
+
+    filter:drop-shadow(0 0 8px white);
+
+}
+
+.state{
+
+    opacity:1;
+
+    transition:.3s;
+
+}
+
+.state.active{
+
+    filter:drop-shadow(0 0 14px #22d3ee);
+
+    transform:scale(1.020);
+
+}
+
+
 /* ==========================================================
    STATUS BAR
 ========================================================== */
