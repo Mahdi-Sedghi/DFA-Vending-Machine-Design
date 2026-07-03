@@ -235,3 +235,69 @@ body{
                 , 0 0 18px rgba(0, 220, 255, .25);
 
 }
+
+#dfaGraph{
+/* 
+    position:relative;
+
+    left:50px;
+
+    top:10px; */
+
+    transform:translate(0px,-50px);
+
+}
+
+/* ==========================================================
+   STATUS BAR
+========================================================== */
+
+#status{
+
+    position: absolute;
+    
+    top: 407px;
+    left: 428px;
+    width: 155px;
+    height: 200px;
+    
+    padding: 18px;
+    
+    border-radius: 10px;
+    
+    background: rgba(15, 25, 40, .65);
+    
+    border: 1px solid rgba(0, 220, 255, .45);
+    box-shadow: 0 0 18px rgba(0, 220, 255, .25);
+    
+    backdrop-filter: blur(8px);
+
+}
+
+.status-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-top:20px;
+
+    color:white;
+
+    font-size:10px;
+
+}
+
+.status-row span:last-child{
+
+    color:#00E5FF;
+
+    font-weight:bold;
+
+}
+
+.Status-font{
+
+    color: rgba(130, 4, 241, 0.85);
+
+}
