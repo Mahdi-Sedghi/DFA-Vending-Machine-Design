@@ -1,46 +1,69 @@
+/* ==========================================================
+   RESET
+========================================================== */
+
 *{
-
     margin:0;
-
     padding:0;
-
     box-sizing:border-box;
-
 }
+
+/* ==========================================================
+   BODY
+========================================================== */
 
 body{
 
-    background:#111;
+    width:100vw;
+    height:100vh;
+
+    overflow:hidden;
 
     display:flex;
-
     justify-content:center;
-
     align-items:center;
 
-    min-height:100vh;
+    background:#111;
 
-    font-family:Arial, sans-serif;
-
+    font-family:Arial, Helvetica, sans-serif;
 }
+
+/* ==========================================================
+   APP
+========================================================== */
 
 .app{
 
-    width:min(95vw,1536px);
-    
-    aspect-ratio:1536 / 1024;
+    position:relative;
+
+    width:min(100vw, calc(100vh * 1536 / 1024));
+    aspect-ratio:1536/1024;
 
 }
+
+/* ==========================================================
+   BACKGROUND IMAGE
+========================================================== */
 
 #background{
 
-    display:block;
+    position:absolute;
+
+    inset:0;
 
     width:100%;
+    height:100%;
 
-    height:auto;
+    object-fit:fill;
+
+    user-select:none;
+    pointer-events:none;
 
 }
+
+/* ==========================================================
+   CONTROL LAYER
+========================================================== */
 
 #controls{
 
@@ -50,99 +73,165 @@ body{
 
 }
 
-#btn5000 {
+/* ==========================================================
+   COMMON BUTTON STYLE
+========================================================== */
+
+.control-btn{
+
     position: absolute;
-    left: 413px;
-    top: 154px;
-    width: 116px;
-    height: 46px;
-    cursor: pointer;
-    border: none;
+
+    left:447px;
+    width:121px;
+    height:33.5px;
+
+    cursor:pointer;
+
+    border:none;
+
+    border-radius:5px;
+
+    background:rgba(0,190,255,.12);
+
+    box-shadow:
+        0 0 8px rgba(0,220,255,.7),
+        0 0 22px rgba(0,170,255,.45);
+
+    transition:
+        transform .15s,
+        box-shadow .2s,
+        background .2s;
+
 }
 
-#btn10000 {
-    position: absolute;
-    left: 413px;
-    top: 214px;
-    width: 116px;
-    height: 46px;
-    cursor: pointer;
-    border: none;
+/* Hover */
+
+.control-btn:hover{
+
+    transform:scale(1.04);
+
+    background:rgba(0,190,255,.22);
+
+    box-shadow:
+        0 0 12px rgba(0,240,255,.95),
+        0 0 28px rgba(0,180,255,.7);
+
 }
 
-#btn20000 {
-    position: absolute;
-    left: 413px;
-    top: 273px;
-    width: 116px;
-    height: 46px;
-    cursor: pointer;
-    border: none;
+/* Click */
+
+.control-btn:active{
+
+    transform:scale(.96);
+
 }
 
-#btnBuy {
-    position: absolute;
-    left: 413px;
-    top: 331px;
-    width: 116px;
-    height: 46px;
-    cursor: pointer;
-    border: none;
+/* ==========================================================
+   MONEY BUTTONS
+========================================================== */
+
+#btn5000{
+
+    top:120px;
+
+    outline:1.5px solid rgba(0,220,255,.85);
+
 }
 
-#btnStop {
-    position: absolute;
-    left: 413px;
-    top: 390px;
-    width: 116px;
-    height: 46px;
-    cursor: pointer;
-    border: none;
+#btn10000{
+
+    top:165px;
+
+    outline:1.5px solid rgba(0,220,255,.85);
+
 }
 
-#btnReset {
-    position: absolute;
-    left: 413px;
-    top: 449px;
-    width: 116px;
-    height: 46px;
-    cursor: pointer;
-    border: none;
+#btn20000{
+
+    top:210px;
+
+    outline:1.5px solid rgba(0,220,255,.85);
+
 }
+
+/* ==========================================================
+   ACTION BUTTONS
+========================================================== */
+
+#btnBuy{
+
+    top:255px;
+
+    outline:1.5px solid rgba(0,220,255,.85);
+
+}
+
+#btnStop{
+
+    top:300px;
+
+    outline:1.5px solid rgba(0,220,255,.85);
+
+}
+
+#btnReset{
+
+    top:345px;
+
+    outline:1.5px solid rgba(0,220,255,.85);
+
+}
+
+/* ==========================================================
+   OUTPUT CONSOLE
+========================================================== */
 
 #output{
 
-    position: absolute;
-    background: transparent;
-    left: 18px;
-    bottom: 25px;
-    width: 515px;
-    height: 80px;
+    position:absolute;
+
+    left:31px;
+    bottom:23px;
+
+    width:533px;
+    height:62px;
+
+    /* padding:12px; */
+
+    outline:2px solid rgba(23, 2, 27, 0.85);
+
+    overflow-y:auto;
+
+    color:#ffffff;
+
+    font-size:18px;
+
+    font-family:Consolas, monospace;
+
+    text-shadow:0 0 8px #00D9FF;
+
 }
+
+/* ==========================================================
+   GRAPH AREA
+========================================================== */
 
 #graph{
 
-    position:absolute;
-
-    right:40px;
-
-    top:70px;
-
-    width:700px;
-
-    height:650px;
-
-}
-
-.control-btn {
     position: absolute;
-    background: transparent;
-    border: none;
-    cursor: pointer;
+
+    right: 21px;
+    top: 96px;
     
-    background:rgba(0,255,150,.15);
-    border:2px solid #00ff99;
-    border-radius:5px;
-    box-shadow:0 0 12px #00ff99;
+    width: 550px;
+    height: 453px;
+    
+    border-radius: 10px;
+    border: 3px dashed rgba(0, 220, 255, .55);
+    
+    background: rgba(0, 30, 60, .10);
+    box-shadow: inset 
+                0 0 20px rgba(0, 220, 255, .12)
+                , 0 0 18px rgba(0, 220, 255, .25);
 
 }
